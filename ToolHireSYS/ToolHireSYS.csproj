@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7BA423D9-D083-4121-811A-F36B006FF3C6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ToolHireSYS</RootNamespace>
+    <AssemblyName>ToolHireSYS</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Oracle.DataAccess, Version=2.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160719\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customers.cs" />
+    <Compile Include="DBConnect.cs" />
+    <Compile Include="frmDeleteCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteCustomer.Designer.cs">
+      <DependentUpon>frmDeleteCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeleteTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeleteTools.Designer.cs">
+      <DependentUpon>frmDeleteTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGenerateInvoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGenerateInvoices.Designer.cs">
+      <DependentUpon>frmGenerateInvoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHireTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHireTools.Designer.cs">
+      <DependentUpon>frmHireTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIncomeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIncomeReport.Designer.cs">
+      <DependentUpon>frmIncomeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLateReturns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLateReturns.Designer.cs">
+      <DependentUpon>frmLateReturns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListCustomer.Designer.cs">
+      <DependentUpon>frmListCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListTools.Designer.cs">
+      <DependentUpon>frmListTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecordPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecordPayment.Designer.cs">
+      <DependentUpon>frmRecordPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegisterCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegisterCustomer.Designer.cs">
+      <DependentUpon>frmRegisterCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReturnTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReturnTools.Designer.cs">
+      <DependentUpon>frmReturnTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateCustomer.Designer.cs">
+      <DependentUpon>frmUpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateTools.Designer.cs">
+      <DependentUpon>frmUpdateTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="frmRegisterTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegisterTools.Designer.cs">
+      <DependentUpon>frmRegisterTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rentals.cs" />
+    <Compile Include="Tools.cs" />
+    <Compile Include="Validation.cs" />
+    <EmbeddedResource Include="frmDeleteCustomer.resx">
+      <DependentUpon>frmDeleteCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeleteTools.resx">
+      <DependentUpon>frmDeleteTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGenerateInvoices.resx">
+      <DependentUpon>frmGenerateInvoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHireTools.resx">
+      <DependentUpon>frmHireTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIncomeReport.resx">
+      <DependentUpon>frmIncomeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLateReturns.resx">
+      <DependentUpon>frmLateReturns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListCustomer.resx">
+      <DependentUpon>frmListCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListTools.resx">
+      <DependentUpon>frmListTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecordPayment.resx">
+      <DependentUpon>frmRecordPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegisterCustomer.resx">
+      <DependentUpon>frmRegisterCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegisterTools.resx">
+      <DependentUpon>frmRegisterTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReturnTools.resx">
+      <DependentUpon>frmReturnTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateCustomer.resx">
+      <DependentUpon>frmUpdateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateTools.resx">
+      <DependentUpon>frmUpdateTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
